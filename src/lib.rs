@@ -85,7 +85,7 @@ impl PasswordBuilder {
     /// let mut password_builder = PasswordBuilder::new() // length 20
     ///     .set_length(15); // length 15
     /// ```
-    pub fn set_length(mut self, length: i32) -> Self {
+    pub fn set_length(&mut self, length: i32) -> Self {
         self.length = length;
         self
     }
@@ -98,7 +98,7 @@ impl PasswordBuilder {
     /// let mut password_builder = PasswordBuilder::new() // false
     ///     .include_special_characters(); // true
     /// ```
-    pub fn include_special_characters(mut self) -> Self {
+    pub fn include_special_characters(&mut self) -> Self {
         self.include_special_characters = true;
         self
     }
@@ -111,7 +111,7 @@ impl PasswordBuilder {
     /// let mut password_builder = PasswordBuilder::new() // false
     ///     .use_numbers(); // true
     /// ```
-    pub fn use_numbers(mut self) -> Self {
+    pub fn use_numbers(&mut self) -> Self {
         self.use_numbers = true;
         self
     }
@@ -124,7 +124,7 @@ impl PasswordBuilder {
     /// let mut password_builder = PasswordBuilder::new() // false
     ///     .use_uppercase(); // true
     /// ```
-    pub fn use_uppercase(mut self) -> Self {
+    pub fn use_uppercase(&mut self) -> Self {
         self.use_uppercase = true;
         self
     }
